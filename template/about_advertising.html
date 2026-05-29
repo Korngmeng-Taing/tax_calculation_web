@@ -1,0 +1,174 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}អំពីពន្ធលើផ្ទាំងផ្សព្វផ្សាយ{% endblock %}
+{% block nav_about %}
+active
+{% endblock %}
+
+{% block content %}
+
+<section class="info-hero">
+    <div class="hero-text" style="text-align: center; margin-bottom: 40px;">
+        <div
+            style="max-width: 900px; margin: 0 auto; color: white; text-align: center; position: relative; z-index: 1;">
+            <h1 style="font-family: 'Khmer Moul', cursive; font-size: 2rem; margin-bottom: 15px; color: white;">
+                អំពីពន្ធលើផ្ទាំងផ្សព្វផ្សាយ</h1>
+            <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); line-height: 1.8;">
+                ស្វែងយល់អំពីពន្ធលើផ្ទាំងផ្សព្វផ្សាយប្រចាំឆ្នាំដែលត្រូវឱ្យក្រុមហ៊ុន រដ្ឋាភិបាល
+                និងលេខឯកជនលើផ្ទាំងផ្សព្វផ្សាយគ្រប់ប្រភេទនៅក្នុងប្រទេសកម្ពុជា។
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="info-grid-section">
+    <div class="container"
+        style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+
+        <div class="info-panel">
+            <h2>១. តើពន្ធលើផ្ទាំងផ្សព្វផ្សាយជាអ្វី?</h2>
+            <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+                ពន្ធលើផ្ទាំងផ្សព្វផ្សាយគឺជាប្រភេទពន្ធប្រចាំឆ្នាំដែលត្រូវអនុវត្តលើផ្ទាំងផ្សព្វផ្សាយគ្រប់ប្រភេទទាំងចល័ត
+                និងអចល័តនៅក្នុងព្រះរាជាណាចក្រកម្ពុជា។
+            </p>
+            <ul>
+                <li>បណ្ណប្រកាសផ្សាយពាណិជ្ជកម្ម</li>
+                <li>ផ្ទាំងផ្សព្វផ្សាយធ្វើពីកៅស៊ូ ក្រណាត់ សំពត់</li>
+                <li>ស្លាកអាជីវកម្មដ្ឋាន</li>
+                <li>ផ្ទាំងអក្សរ ឬផ្ទាំងរូបភាពសម្រាប់គោលបំណងពាណិជ្ជកម្ម</li>
+            </ul>
+        </div>
+
+        <div class="info-panel">
+            <h2>២. ប្រភេទផ្ទាំងផ្សព្វផ្សាយ</h2>
+            <p style="color: #475569; margin-bottom: 15px; line-height: 1.8;">
+                ពន្ធលើផ្ទាំងផ្សព្វផ្សាយអនុវត្តលើប្រភេទផ្ទាំង៖</p>
+            <ul style="font-size: 0.95rem;">
+                <li><strong style="color: #1e293b;">• បណ្ណប្រកាស៖</strong> ឯកសារផ្សព្វផ្សាយពាណិជ្ជកម្ម</li>
+                <li><strong style="color: #1e293b;">• ផ្ទាំងសម្ភារៈផ្សេងៗ៖</strong> កៅស៊ូ ក្រណាត់ សំពត់</li>
+                <li><strong style="color: #1e293b;">• ស្លាកដ្ឋាន៖</strong> ស្លាកពាណិជ្ជកម្មលើផ្ទាំង</li>
+                <li><strong style="color: #1e293b;">• ផ្ទាំងរូបភាព៖</strong> សម្រាប់គោលបំណងពាណិជ្ជកម្ម</li>
+            </ul>
+        </div>
+
+        <div class="info-panel">
+            <h2>៣. ការលើកលែងពន្ធ</h2>
+            <p style="color: #475569; margin-bottom: 20px; line-height: 1.8;">ផ្ទាំងខាងក្រោមត្រូវលើកលែងពន្ធ៖</p>
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+                <div style="border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                    <span style="color: #475569; font-size: 0.95rem;">ស្លាក​របស់​ស្ថាប័នរដ្ឋ អង្គការអន្តរជាតិ</span>
+                </div>
+                <div style="border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                    <span style="color: #475569; font-size: 0.95rem;">ផ្ទាំងផ្សព្វផ្សាយគោលបំណងអប់រំសង្គម</span>
+                </div>
+                <div>
+                    <span style="color: #475569; font-size: 0.95rem;">ផ្សព្វផ្សាយការពារបរិស្ថាន ចរាចរណ៍ សុខភាព</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="tax-rates-section">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+
+        <div class="section-header">
+            <h2>៤. អត្រាពន្ធលើផ្ទាំងផ្សព្វផ្សាយ</h2>
+            <p>
+                អត្រាពន្ធលើផ្ទាំងផ្សព្វផ្សាយត្រូវបានកំណត់ខុសៗគ្នាទៅតាមប្រភេទ និងទំហំផ្ទាំង។
+            </p>
+        </div>
+
+        <div class="tax-table-container">
+            <table class="tax-table">
+                <thead>
+                    <tr>
+                        <th>ប្រភេទផ្ទាំង</th>
+                        <th style="text-align: center;">អត្រាពន្ធ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>បណ្ណប្រកាស ≤ 40 dm²</td>
+                        <td style="text-align: center; font-weight: bold; color: #3b82f6;">500៛ / ទំព័រ</td>
+                    </tr>
+                    <tr>
+                        <td>បណ្ណប្រកាស > 40 dm²</td>
+                        <td style="text-align: center; font-weight: bold; color: #f59e0b;">700៛ / ទំព័រ</td>
+                    </tr>
+                    <tr>
+                        <td>ស្លាកអាជីវកម្ម</td>
+                        <td style="text-align: center; font-weight: bold; color: #10b981;">100៛ – 250៛ / dm² / ឆ្នាំ
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ផ្ទាំងរូបភាពពាណិជ្ជកម្ម</td>
+                        <td style="text-align: center; font-weight: bold; color: #ef4444;">500៛ – 1,500៛ / dm² / ឆ្នាំ
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="example-calculation">
+            <h3>ឧទាហរណ៍ការគណនា៖</h3>
+            <p style="color: #475569; line-height: 1.8; margin-bottom: 16px;">
+                ផ្ទាំងផ្សព្វផ្សាយដែលដាក់តាមដងផ្លូវ មានភ្លើងបំភ្លឺ ទំហំ <strong>2m × 4m</strong>:
+            </p>
+            <div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <strong style="color: #1e293b; display: block; margin-bottom: 10px;">ជំហានទី១៖ គណនាទំហំផ្ទាំង</strong>
+                <code style="font-size: 1.05rem; color: #0f172a;">
+                        2m × 4m = 8m² = 800dm²
+                    </code>
+                <strong style="color: #1e293b; display: block; margin-top: 15px; margin-bottom: 10px;">ជំហានទី២៖
+                    គណនាពន្ធ (អត្រាពន្ធ 1,000៛/dm²)</strong>
+                <code style="font-size: 1.05rem; color: #0f172a;">
+                        800dm² × 1,000៛ = <strong>800,000៛</strong>
+                    </code>
+                <p style="margin-top: 12px; font-weight: bold; color: #10b981; font-size: 1.1rem; margin-bottom: 0;">
+                    ពន្ធលើផ្ទាំងដែលត្រូវបង់ = 800,000៛
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="tax-rates-section">
+    <div class="container" style="max-width: 900px; margin: 0 auto;">
+
+        <div class="section-header">
+            <h2>៥. ការប្រកាស និងបង់ពន្ធលើផ្ទាំងផ្សព្វផ្សាយ</h2>
+            <p>
+                ម្ចាស់ផ្ទាំងផ្សព្វផ្សាយមានកាតព្វកិច្ចសមរម្យក្នុងការប្រកាស និងបង់ពន្ធ។
+            </p>
+        </div>
+
+        <div style="background: white; padding: 30px; border-radius: 12px;">
+            <ul style="color: #475569; line-height: 2.2; padding-left: 25px;">
+                <li>ត្រូវប្រកាសពន្ធលើផ្ទាំងផ្សព្វផ្សាយជារៀងរាល់ឆ្នាំ</li>
+                <li>រយៈពេលបង់ពន្ធ៖ ថ្ងៃទី១ មករា ដល់ថ្ងៃទី៣១ មីនា</li>
+                <li>ផ្ទាំងផ្សព្វផ្សាយថ្មីត្រូវប្រកាសមុនធ្វើការផ្សព្វផ្សាយ</li>
+                <li>ផ្ទាំងថ្មីដាក់ក្នុង៦ខែដើមឆ្នាំ បង់ 100% សាច់ប្រាក់</li>
+                <li>ផ្ទាំងដាក់ក្នុង៦ខែចុងឆ្នាំ បង់ 50% សាច់ប្រាក់</li>
+                <li>អាចបង់តាម៖ សាខាពន្ធដារ GDT Taxpayer App ឬធនាគារដៃគូ</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+<section class="button-section">
+    <div style="max-width: 600px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+        <a href="{% url 'advertising_board_tax' %}">
+            ចាប់ផ្តើមគណនាពន្ធឥឡូវនេះ
+        </a>
+        <a href="{% url 'about_tax' %}">
+            ត្រឡប់ទៅកាន់ព័ត៌មានពន្ធ
+        </a>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,149 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ពន្ធលើអចលនទ្រព្យ - Property Tax Information{% endblock %}
+
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+
+    <section class="info-hero">
+		<div class="hero-text" style="text-align: center; margin-bottom: 40px;">
+			<div style="max-width: 900px; margin: 0 auto; color: white; text-align: center; position: relative; z-index: 1;">
+				<h1 style="font-family: 'Khmer Moul', cursive; font-size: 2rem; margin-bottom: 15px; color: white;">អំពីពន្ធលើអចលនទ្រព្យ</h1>
+				<p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); line-height: 1.8;">
+					ស្វែងយល់អំពីការគណនា ច្បាប់ និងបទប្បញ្ញត្តិពាក់ព័ន្ធនឹងពន្ធលើអចលនទ្រព្យនៅក្នុងប្រទេសកម្ពុជា។
+				</p>
+			</div>
+		</div>
+    </section>
+
+    <section class="info-grid-section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <div class="info-panel">
+                <h2>១. សេចក្តីសង្ខេបអំពីពន្ធ</h2>
+                <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+                    ពន្ធលើអចលនទ្រព្យគឺជាពន្ធដែលត្រូវបង់លើអចលនទ្រព្យទាំងអស់ដែលមានកម្មសិទ្ធិក្នុងប្រទេសកម្ពុជា។ ពន្ធនេះធានាបាននូវការចែកចាយការទទួលខុសត្រូវក្នុងការថែរក្សា និងអភិវឌ្ឍហេដ្ឋារចនាសម្ព័ន្ធ។
+                </p>
+                <ul>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ផ្ទះ - អចលនទ្រព្យប្រភេទលំនៅឋាន</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ដី - ដីសម្រាប់កសិកម្ម ឬវិនិយោគ</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> អាផាតមិន - អចលនទ្រព្យលំនៅឋានចម្រុះ</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ពាណិជ្ជកម្ម - អចលនទ្រព្យសម្រាប់អាជីវកម្ម</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h2>២. ច្បាប់ និងបទប្បញ្ញត្តិ</h2>
+                <p style="color: #475569; margin-bottom: 15px; line-height: 1.8;">គ្រប់គ្រងដោយច្បាប់ និងអនុក្រឹត្យ ដូចខាងក្រោម៖</p>
+                <ul style="font-size: 0.95rem;">
+                    <li><strong style="color: #1e293b;">• ច្បាប់ស្តីពីលក្ខណៈកម្មសិទ្ធិ៖</strong> គ្រឹះនៃប្រព័ន្ធលក្ខណៈកម្មសិទ្ធិកម្ពុជា</li>
+                    <li><strong style="color: #1e293b;">• អនុក្រឹត្យលេខ ១១៤ (អនក្រ.បក)៖</strong> ការគ្រប់គ្រងពន្ធលើអចលនទ្រព្យ</li>
+                    <li><strong style="color: #1e293b;">• ប្រកាសលេខ ០១៦ (សហវ.ពដ)៖</strong> មូលដ្ឋាននិងលក្ខខណ្ឌស្តីពីលក្ខណៈកម្មសិទ្ធិ</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h2>៣. អត្រាពន្ធតាមប្រភេទ</h2>
+                <p style="color: #475569; margin-bottom: 20px; line-height: 1.8;">ពន្ធលើអចលនទ្រព្យត្រូវបានគណនាដោយផ្អែកលើតម្លៃអចលនទ្រព្យ និងប្រភេទរបស់វា។ អត្រាគោលដៅគឺ ០.១% ក្នុងមួយឆ្នាំ។</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                        <span style="color: #475569;"><strong>ផ្ទះលំនៅឋាន</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">០.១%/ឆ្នាំ</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                        <span style="color: #475569;"><strong>ដី</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">០.១២%/ឆ្នាំ</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                        <span style="color: #475569;"><strong>អាផាតមិន</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">០.០៨%/ឆ្នាំ</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                        <span style="color: #475569;"><strong>ពាណិជ្ជកម្ម</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">០.១៥%/ឆ្នាំ</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 15px; background: #f0fdf4; padding: 10px; border-radius: 8px; margin-bottom: 0;">
+                    💡 <strong>សម្គាល់៖</strong> សម្រាប់អចលនទ្រព្យដែលមានតម្លៃលើសពី ៥០ លានរៀល អត្រាពន្ធផ្លាស់ប្តូរដូចខាងក្រោម។
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+	<section class="tax-rates-section">
+		<div class="container" style="max-width: 900px; margin: 0 auto;">
+			
+			<div class="section-header">
+				<h2>4. ប្រព័ន្ធពន្ធតាមដំណាក់កាល (Progressive Tax)</h2>
+				<p>
+					សម្រាប់អចលនទ្រព្យដែលមានតម្លៃខ្ពស់ អត្របង់ពន្ធកើនឡើងដើម្បីធានាភាពយុត្តិធម៌ក្នុងការចែកចាយ។
+				</p>
+			</div>
+
+			<div class="tax-table-container">
+				<table class="tax-table">
+					<thead>
+						<tr>
+							<th>តម្លៃអចលនទ្រព្យ (រៀល)</th>
+							<th style="text-align: center;">អត្របង្កើន</th>
+							<th>រូបមន្តគណនា</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>0 - 50,000,000 រៀល</td>
+							<td style="text-align: center; font-weight: bold; color: #64748b;">x 1.0</td>
+							<td style="color: #64748b;">អត្រាគោល</td>
+						</tr>
+						<tr>
+							<td>50,000,001 - 100,000,000 រៀល</td>
+							<td style="text-align: center; font-weight: bold; color: #3b82f6;">x 1.2</td>
+							<td>អត្រាគោល × 1.2</td>
+						</tr>
+						<tr>
+							<td>លើសពី 100,000,000 រៀល</td>
+							<td style="text-align: center; font-weight: bold; color: #10b981;">x 1.5</td>
+							<td>អត្របង្កើន × 1.5</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="example-calculation">
+				<h3>ឧទាហរណ៍ការគណនាពន្ធលើអចលនទ្រព្យ៖</h3>
+				<p style="color: #475569; line-height: 1.8; margin-bottom: 16px;">
+					ប្រសិនបើអ្នកមានផ្ទះតម្លៃ <strong>80,000,000 រៀល</strong>៖
+				</p>
+				<ul>
+					<li><strong>តម្លៃអចលនទ្រព្យ៖</strong> 80,000,000 រៀល</li>
+					<li><strong>ប្រភេទ៖</strong> ផ្ទះលំនៅឋាន</li>
+					<li><strong>អត្របង្កើន៖</strong> <strong style="color: #10b981;">x 1.2</strong> (ដោយសារតម្លៃលើសពី ៥០ លាន)</li>
+				</ul>
+				<div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
+					<strong style="color: #1e293b; display: block; margin-bottom: 10px;">ការគណនាលម្អិត៖</strong>
+					<code style="font-size: 1.05rem; color: #0f172a;">
+						ពន្ធ = 80,000,000 × 0.1% × 1.2 = <strong>96,000 រៀល/ឆ្នាំ</strong>
+					</code>
+					<p style="margin-top: 12px; font-weight: bold; color: #10b981; font-size: 1.1rem; margin-bottom: 0;">
+						ពន្ធលើអចលនទ្រព្យដែលត្រូវបង់សរុប = 96,000 រៀលក្នុងមួយឆ្នាំ
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+    <section class="button-section">
+        <div style="max-width: 600px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <a href="{% url 'property_tax' %}">
+                ចាប់ផ្តើមគណនាពន្ធឥឡូវនេះ
+            </a>
+            <a href="{% url 'about_tax' %}">
+                ត្រឡប់ទៅកាន់ព័ត៌មានពន្ធ
+            </a>
+        </div>
+    </section>
+{% endblock %}

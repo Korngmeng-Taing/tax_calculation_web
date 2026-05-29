@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}អំពីអាករពិសេស - Special Tax Information{% endblock %}
+
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+
+    <section class="info-hero">
+		<div class="hero-text" style="text-align: center; margin-bottom: 40px;">
+			<div style="max-width: 900px; margin: 0 auto; color: white; text-align: center; position: relative; z-index: 1;">
+				<h1 style="font-family: 'Khmer Moul', cursive; font-size: 2rem; margin-bottom: 15px; color: white;">អំពីអាករពិសេស (Special Tax)</h1>
+				<p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); line-height: 1.8;">
+					ស្វែងយល់អំពីអាករពិសេសដែលត្រូវបានកំណត់លើទំនិញ និងសេវាកម្មជាក់លាក់មួយចំនួននៅក្នុងប្រទេសកម្ពុជា។
+				</p>
+			</div>
+		</div>
+    </section>
+
+    <section class="info-grid-section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <div class="info-panel">
+                <h2>១. តើអាករពិសេសជាអ្វី?</h2>
+                <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+                    អាករពិសេស (Special Tax) គឺជាប្រភេទអាករប្រយោលដែលប្រមូលលើទំនិញ ឬសេវាមួយចំនួនដែលមានលក្ខណៈប្រណីត ឬមិនមែនជាតម្រូវការចាំបាច់ ឬប៉ះពាល់ដល់សុខភាព សង្គម និងបរិស្ថាន។
+                </p>
+                <ul>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ទំនិញប្រណីត (រថយន្ត គ្រឿងបន្លាស់)</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ផលិតផលប៉ះពាល់សុខភាព (ស្រា បារី ភេសជ្ជៈផ្អែម)</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> សេវាកម្សាន្ត និងទូរគមនាគមន៍</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h2>២. មូលដ្ឋានគិតអាករ</h2>
+                <p style="color: #475569; margin-bottom: 15px; line-height: 1.8;">មូលដ្ឋានគិតអាករពិសេសត្រូវបានកំណត់ដូចខាងក្រោម៖</p>
+                <ul style="font-size: 0.95rem;">
+                    <li><strong style="color: #1e293b;">• ទំនិញផលិតក្នុងស្រុក៖</strong> ៩០% នៃតម្លៃលក់លើវិក្កយបត្រ (មិនរួម VAT)</li>
+                    <li><strong style="color: #1e293b;">• ទំនិញនាំចូល៖</strong> តម្លៃគយ រួមទាំងពន្ធនាំចូល (មិនរួម VAT)</li>
+                    <li><strong style="color: #1e293b;">• សេវាកម្ម៖</strong> ១០០% នៃតម្លៃសេវាដែលបានផ្តល់</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h2>៣. កាតព្វកិច្ចបង់ពន្ធ</h2>
+                <p style="color: #475569; margin-bottom: 20px; line-height: 1.8;">សហគ្រាសដែលផ្គត់ផ្គង់ទំនិញ ឬសេវាជាប់អាករពិសេសមានកាតព្វកិច្ច៖</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                        <span style="color: #475569;"><strong>ការដាក់លិខិតប្រកាស</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">រៀងរាល់ខែ</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                        <span style="color: #475569;"><strong>កាលបរិច្ឆេទកំណត់</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">ត្រឹមថ្ងៃទី២០ នៃខែបន្ទាប់</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 15px; background: #f0fdf4; padding: 10px; border-radius: 8px; margin-bottom: 0;">
+                    💡 <strong>សម្គាល់:</strong> អាករពិសេសត្រូវគិតបញ្ចូលក្នុងមូលដ្ឋានគិតអាករលើតម្លៃបន្ថែម (VAT)។
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+	<section class="tax-rates-section">
+		<div class="container" style="max-width: 900px; margin: 0 auto;">
+			
+			<div class="section-header">
+				<h2>៤. អត្រាអាករពិសេសលើទំនិញ និងសេវាសំខាន់ៗ</h2>
+				<p>
+					អត្រាអាករត្រូវបានកំណត់ខុសៗគ្នាទៅតាមប្រភេទមុខទំនិញ ឬសេវាកម្ម។
+				</p>
+			</div>
+
+			<div class="tax-table-container">
+				<table class="tax-table">
+					<thead>
+						<tr>
+							<th>ប្រភេទមុខទំនិញ/សេវាកម្ម</th>
+							<th style="text-align: center;">អត្រាអាករ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>ស្រាគ្រប់ប្រភេទ (Alcohol)</td>
+							<td style="text-align: center; font-weight: bold; color: #ef4444;">៣៥%</td>
+						</tr>
+						<tr>
+							<td>ស្រាបៀរ (Beer)</td>
+							<td style="text-align: center; font-weight: bold; color: #ef4444;">៣០%</td>
+						</tr>
+						<tr>
+							<td>បារី និងស៊ីហ្គា (Cigarettes/Cigars)</td>
+							<td style="text-align: center; font-weight: bold; color: #f59e0b;">២០% - ២៥%</td>
+						</tr>
+						<tr>
+							<td>ភេសជ្ជៈផ្អែម និងភេសជ្ជៈប៉ូវកម្លាំង</td>
+							<td style="text-align: center; font-weight: bold; color: #3b82f6;">១០% - ១៥%</td>
+						</tr>
+						<tr>
+							<td>សេវាដឹកជញ្ជូនផ្លូវអាកាស និងកម្សាន្ត</td>
+							<td style="text-align: center; font-weight: bold; color: #10b981;">១០%</td>
+						</tr>
+						<tr>
+							<td>សេវាទូរគមនាគមន៍ (Telecom)</td>
+							<td style="text-align: center; font-weight: bold; color: #64748b;">៣%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="example-calculation">
+				<h3>ឧទាហរណ៍ការគណនា:</h3>
+				<p style="color: #475569; line-height: 1.8; margin-bottom: 16px;">
+					ប្រសិនបើក្រុមហ៊ុនផលិតស្រាបៀរ លក់ស្រាបៀរក្នុងតម្លៃ <strong>១០,០០០ ដុល្លារ</strong> (តម្លៃមិនទាន់រួមអាករ):
+				</p>
+				<div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
+					<strong style="color: #1e293b; display: block; margin-bottom: 10px;">ជំហានទី១៖ គណនាមូលដ្ឋានគិតអាករ (៩០%)</strong>
+					<code style="font-size: 1.05rem; color: #0f172a;">
+						១០,០០០ × ៩០% = ៩,០០០ ដុល្លារ
+					</code>
+					<strong style="color: #1e293b; display: block; margin-top: 15px; margin-bottom: 10px;">ជំហានទី២៖ គណនាអាករពិសេស (៣០%)</strong>
+					<code style="font-size: 1.05rem; color: #0f172a;">
+						៩,០០០ × ៣០% = <strong>២,៧០០ ដុល្លារ</strong>
+					</code>
+					<p style="margin-top: 12px; font-weight: bold; color: #10b981; font-size: 1.1rem; margin-bottom: 0;">
+						នាំឲ្យអាករពិសេសដែលត្រូវបង់សរុប = ២,៧០០ ដុល្លារ
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+    <section class="button-section">
+        <div style="max-width: 600px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <a href="{% url 'special_tax' %}">
+                ចាប់ផ្តើមគណនាអាករឥឡូវនេះ
+            </a>
+            <a href="{% url 'about_tax' %}">
+                ត្រឡប់ទៅកាន់ព័ត៌មានពន្ធ
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

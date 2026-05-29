@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}ពន្ធប្រថាប់ត្រា - Registration Tax Information{% endblock %}
+
+{% block nav_about %}active{% endblock %}
+
+{% block content %}
+
+    <section class="info-hero">
+		<div class="hero-text" style="text-align: center; margin-bottom: 40px;">
+			<div style="max-width: 900px; margin: 0 auto; color: white; text-align: center; position: relative; z-index: 1;">
+				<h1 style="font-family: 'Khmer Moul', cursive; font-size: 2rem; margin-bottom: 15px; color: white;">អំពីពន្ធប្រថាប់ត្រា (Registration Tax)</h1>
+				<p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.85); line-height: 1.8;">
+					ស្វែងយល់អំពីការបង់ពន្ធលើការផ្ទេរកម្មសិទ្ធិអចលនទ្រព្យ និងយានយន្តគ្រប់ប្រភេទនៅក្នុងប្រទេសកម្ពុជា។
+				</p>
+			</div>
+		</div>
+    </section>
+
+    <section class="info-grid-section">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+            
+            <div class="info-panel">
+                <h2>១. តើពន្ធប្រថាប់ត្រាជាអ្វី?</h2>
+                <p style="color: #475569; line-height: 1.8; margin-bottom: 20px;">
+                    ពន្ធប្រថាប់ត្រា គឺជាពន្ធដែលត្រូវបង់នៅពេលមានការផ្ទេរកម្មសិទ្ធិ ឬសិទ្ធិកាន់កាប់អចលនទ្រព្យ (ដី ផ្ទះ អគារ) និងចលនទ្រព្យមួយចំនួន (រថយន្ត ម៉ូតូ កប៉ាល់)។
+                </p>
+                <ul>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ការទិញ-លក់ អចលនទ្រព្យ</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ការផ្ទេរកម្មសិទ្ធិយានយន្ត</li>
+                    <li><span style="color: #3b82f6; font-weight: bold;">✓</span> ការផ្ទេរភាគហ៊ុនក្រុមហ៊ុន</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h2>២. ការលើកលែងពន្ធ និងការកាត់បន្ថយ</h2>
+                <p style="color: #475569; margin-bottom: 15px; line-height: 1.8;">ការលើកលែងពន្ធត្រូវបានអនុវត្តក្នុងករណីខ្លះដូចជា៖</p>
+                <ul style="font-size: 0.95rem;">
+                    <li><strong style="color: #1e293b;">• រវាងសាច់ញាតិផ្ទាល់៖</strong> ប្តី-ប្រពន្ធ ឪពុកម្តាយ-កូន ជីដូនជីតា-ចៅ (លើកលែង ១០០%)</li>
+                    <li><strong style="color: #1e293b;">• មរតក/អំណោយ៖</strong> រវាងបងប្អូនបង្កើត ឬដន្លង (មានការកាត់កងតាមកម្រិតកំណត់)</li>
+                    <li><strong style="color: #1e293b;">• យានយន្តខ្នាតតូច៖</strong> ម៉ូតូ កង់បី និងយានជំនិះកសិកម្មមួយចំនួន</li>
+                </ul>
+            </div>
+
+            <div class="info-panel">
+                <h2>៣. កាតព្វកិច្ចបង់ពន្ធ</h2>
+                <p style="color: #475569; margin-bottom: 20px; line-height: 1.8;">អ្នកទទួលកម្មសិទ្ធិមានភារៈត្រូវបង់ពន្ធក្នុងរយៈពេលកំណត់៖</p>
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem; border-bottom: 1px dashed #e2e8f0; padding-bottom: 8px;">
+                        <span style="color: #475569;"><strong>រយៈពេលកំណត់</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">៣ ខែ ក្រោយការផ្ទេរ</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.95rem;">
+                        <span style="color: #475569;"><strong>កន្លែងបង់ពន្ធ</strong></span>
+                        <span style="color: #10b981; font-weight: bold;">សាខាពន្ធដារ ឬធនាគារ</span>
+                    </div>
+                </div>
+                <p style="font-size: 0.85rem; color: #64748b; margin-top: 15px; background: #f0fdf4; padding: 10px; border-radius: 8px; margin-bottom: 0;">
+                    💡 <strong>សម្គាល់:</strong> ការខកខានមិនបានបង់ពន្ធតាមកំណត់នឹងត្រូវរងការផាកពិន័យតាមច្បាប់។
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+	<section class="tax-rates-section">
+		<div class="container" style="max-width: 900px; margin: 0 auto;">
+			
+			<div class="section-header">
+				<h2>៤. អត្រាពន្ធប្រថាប់ត្រា</h2>
+				<p>
+					អត្រាពន្ធត្រូវបានកំណត់តាមប្រភេទនៃទ្រព្យសម្បត្តិដែលត្រូវបានផ្ទេរកម្មសិទ្ធិ។
+				</p>
+			</div>
+
+			<div class="tax-table-container">
+				<table class="tax-table">
+					<thead>
+						<tr>
+							<th>ប្រភេទទ្រព្យសម្បត្តិ/ប្រតិបត្តិការ</th>
+							<th style="text-align: center;">អត្រាពន្ធ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>អចលនទ្រព្យ (ដី ផ្ទះ អគារ និងសំណង់ផ្សេងៗ)</td>
+							<td style="text-align: center; font-weight: bold; color: #ef4444;">៤%</td>
+						</tr>
+						<tr>
+							<td>យានយន្ត និងមធ្យោបាយដឹកជញ្ជូនគ្រប់ប្រភេទ</td>
+							<td style="text-align: center; font-weight: bold; color: #ef4444;">៤%</td>
+						</tr>
+						<tr>
+							<td>ការផ្ទេរភាគហ៊ុនក្រុមហ៊ុន</td>
+							<td style="text-align: center; font-weight: bold; color: #3b82f6;">០.១%</td>
+						</tr>
+						<tr>
+							<td>លិខិតសន្យាផ្គត់ផ្គង់ទំនិញ ឬសេវាប្រើប្រាស់ថវិការដ្ឋ</td>
+							<td style="text-align: center; font-weight: bold; color: #3b82f6;">០.១%</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="example-calculation">
+				<h3>ឧទាហរណ៍ការគណនា:</h3>
+				<p style="color: #475569; line-height: 1.8; margin-bottom: 16px;">
+					ប្រសិនបើលោកអ្នកទិញផ្ទះមួយខ្នងដែលមានតម្លៃវាយតម្លៃ <strong>២០០,០០០,០០០ រៀល</strong>:
+				</p>
+				<div style="background: #f8fafc; padding: 20px; border-radius: 12px; border: 1px solid #e2e8f0;">
+					<strong style="color: #1e293b; display: block; margin-bottom: 10px;">ការគណនា (អត្រា ៤%):</strong>
+					<code style="font-size: 1.05rem; color: #0f172a;">
+						២០០,០០០,០០០ × ៤% = <strong>៨,០០០,០០០ រៀល</strong>
+					</code>
+					<p style="margin-top: 12px; font-weight: bold; color: #10b981; font-size: 1.1rem; margin-bottom: 0;">
+						នាំឲ្យពន្ធប្រថាប់ត្រាដែលត្រូវបង់ = ៨,០០០,០០០ រៀល
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+    <section class="button-section">
+        <div style="max-width: 600px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <a href="{% url 'registration_tax' %}">
+                ចាប់ផ្តើមគណនាពន្ធឥឡូវនេះ
+            </a>
+            <a href="{% url 'about_tax' %}">
+                ត្រឡប់ទៅកាន់ព័ត៌មានពន្ធ
+            </a>
+        </div>
+    </section>
+
+{% endblock %}

@@ -1,0 +1,19 @@
+# Virtual Environments
+venv/
+.venv/
+env/
+.env
+
+# Python Compiled Files
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Django Specific
+db.sqlite3
+/media/
+/staticfiles/
+
+# OS Files
+.DS_Store
