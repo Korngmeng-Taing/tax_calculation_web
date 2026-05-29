@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "tax_calculation_web/wsgi.py",
+      "src": "tax_calculation/wsgi.py",
       "use": "@vercel/python"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "tax_calculation_web/wsgi.py"
+      "dest": "tax_calculation/wsgi.py"
     }
   ]
 }
