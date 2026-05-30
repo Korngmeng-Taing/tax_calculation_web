@@ -2370,18 +2370,16 @@ footer {
 }
 
 /* ============ About Salary Tax Page Improvements ============ */
-
 .info-hero {
   background: linear-gradient(
     135deg,
     rgba(30, 60, 114, 0.95),
-    rgba(52, 73, 94, 0.95)
-  ) !important;
-  position: relative;
-  overflow: hidden;
-  animation: slideInDown 0.8s ease-out;
+    rgba(42, 82, 152, 0.9)
+  );
+  padding: 80px 20px;
+  color: white;
+  text-align: center;
 }
-
 .info-hero::before {
   content: "";
   position: absolute;
