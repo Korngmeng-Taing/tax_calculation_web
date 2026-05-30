@@ -187,7 +187,7 @@ def salary_tax(request):
             
             # Create detailed calculation breakdown
             TaxCalculationDetail.objects.create(
-                tax_record=tax_record,
+                #tax_record=tax_record,
                 tax_rate=tax_rate,
                 taxable_amount=taxable_income_khr,
                 deduction_children=deduction_children,  # Already in KHR
