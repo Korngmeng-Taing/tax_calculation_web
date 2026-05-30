@@ -3400,3 +3400,42 @@ textarea {
     padding: 10px 12px;
   }
 }
+
+/* ========================= */
+/* MAIN HEADER RESPONSIVENESS */
+/* ========================= */
+.main-header {
+  background-color: #004b87;
+  padding: 15px 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+  }
+  
+  .main-header .brand {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .main-header .brand-text {
+    text-align: center;
+  }
+
+  .main-header .header-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

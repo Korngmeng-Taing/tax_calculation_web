@@ -22,15 +22,14 @@
 <body class="{% block body_class %}{% endblock %}"
     style="background-image: none; background-color: #e5ead4; margin: 0; padding: 0; font-family: 'Kantumruy Pro', sans-serif;">
 
-    <div
-        style="background-color: #004b87; padding: 15px 8vw; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <header class="main-header">
 
         <div class="brand" style="display: flex; align-items: center; gap: 15px;">
             <div class="logo"
-                style="width: 65px; height: 65px; background-color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Moul', sans-serif; font-size: 16px; color: #004b87; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                style="width: 65px; height: 65px; background-color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Moul', sans-serif; font-size: 16px; color: #004b87; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1); flex-shrink: 0;">
                 ពន្ធ
             </div>
-            <div style="color: white; line-height: 1.4;">
+            <div class="brand-text" style="color: white; line-height: 1.4;">
                 <h1
                     style="margin: 0; font-family: 'Moul', sans-serif; font-size: 18px; font-weight: normal; letter-spacing: 0.5px;">
                     ប្រព័ន្ធគណនាពន្ធនៃប្រទេសកម្ពុជា</h1>
@@ -39,7 +38,7 @@
             </div>
         </div>
 
-        <div style="display: flex; align-items: center; gap: 10px;">
+        <div class="header-actions">
             <a href="{% url 'study_plan' %}"
                 style="text-decoration: none; background: rgba(255, 255, 255, 0.15); color: white; padding: 6px 16px; border-radius: 20px; font-size: 12px; border: 1px solid rgba(255,255,255,0.3); display: flex; align-items: center; gap: 6px; transition: background 0.2s;"
                 class="{% if request.resolver_match.url_name == 'study_plan' %} active {% endif %}"
@@ -48,7 +47,7 @@
                 <span>🌐</span> គម្រោងសិក្សា​និស្សិត​ឆ្នាំទី៤ (អំពីគម្រោងសិក្សា)
             </a>
         </div>
-    </div>
+    </header>
 
     <nav class="main-navbar">
         <div class="nav-scroll">
