@@ -50,98 +50,84 @@
         </div>
     </div>
 
-    <!-- Navigation items automatically inherit Kantumruy Pro with improved readability -->
-    <nav
-        style="background-color: #003a6a; padding: 0 4vw; display: flex; flex-wrap: wrap; gap: 1px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-        <a href="{% url 'home' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'home' %} active {% endif %}">
-            ទំព័រដើម
-        </a>
+    <nav class="main-navbar">
+        <div class="nav-scroll">
 
-        <a href="{% url 'about_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_tax' %} active {% endif %}">
-            អំពីពន្ធ
-        </a>
+            <a href="{% url 'home' %}" class="{% if request.resolver_match.url_name == 'home' %}active{% endif %}">
+                ទំព័រដើម
+            </a>
 
-        <a href="{% url 'about_salary_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_salary_tax' %} active {% endif %}">
-            ប្រាក់បៀវត្សរ៍
-        </a>
+            <a href="{% url 'about_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_tax' %}active{% endif %}">
+                អំពីពន្ធ
+            </a>
 
-        <a href="{% url 'about_accomodation_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_accomodation_tax' %} active {% endif %}">
-            ពន្ធស្នាក់នៅ
-        </a>
+            <a href="{% url 'about_salary_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_salary_tax' %}active{% endif %}">
+                ប្រាក់បៀវត្សរ៍
+            </a>
 
-        <a href="{% url 'about_property_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_property_tax' %} active {% endif %}">
-            អចលនទ្រព្យ
-        </a>
+            <a href="{% url 'about_accomodation_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_accomodation_tax' %}active{% endif %}">
+                ពន្ធស្នាក់នៅ
+            </a>
 
-        <a href="{% url 'about_income_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_income_tax' %} active {% endif %}">
-            ប្រាក់ចំណូល
-        </a>
+            <a href="{% url 'about_property_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_property_tax' %}active{% endif %}">
+                អចលនទ្រព្យ
+            </a>
 
-        <a href="{% url 'about_vat_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_vat_tax' %} active {% endif %}">
-            ពន្ធអាកលើតម្លៃបន្ថែម
-        </a>
+            <a href="{% url 'about_income_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_income_tax' %}active{% endif %}">
+                ប្រាក់ចំណូល
+            </a>
 
-        <a href="{% url 'about_plt_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_plt_tax' %} active {% endif %}">
-            ពន្ធបំភ្លឺសាធារណៈ
-        </a>
+            <a href="{% url 'about_vat_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_vat_tax' %}active{% endif %}">
+                ពន្ធ VAT
+            </a>
 
-        <a href="{% url 'about_registration_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_registration_tax' %} active {% endif %}">
-            ប្រថាប់ត្រា
-        </a>
+            <a href="{% url 'about_plt_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_plt_tax' %}active{% endif %}">
+                PLT
+            </a>
 
-        <a href="{% url 'about_patent_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_patent_tax' %} active {% endif %}">
-            ពន្ធប៉េតង់
-        </a>
+            <a href="{% url 'about_registration_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_registration_tax' %}active{% endif %}">
+                ប្រថាប់ត្រា
+            </a>
 
-        <a href="{% url 'about_special_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_special_tax' %} active {% endif %}">
-            អាករពិសេស
-        </a>
+            <a href="{% url 'about_patent_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_patent_tax' %}active{% endif %}">
+                ប៉េតង់
+            </a>
 
-        <a href="{% url 'about_transportation_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_transportation_tax' %} active {% endif %}">
-            មធ្យោបាយដឹងជញ្ចូន
-        </a>
+            <a href="{% url 'about_special_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_special_tax' %}active{% endif %}">
+                អាករពិសេស
+            </a>
 
-        <a href="{% url 'about_unused_land_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_unused_land_tax' %} active {% endif %}">
-            ដីមិនប្រើប្រាស់
-        </a>
+            <a href="{% url 'about_transportation_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_transportation_tax' %}active{% endif %}">
+                ដឹកជញ្ជូន
+            </a>
 
-        <a href="{% url 'about_withholding_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_withholding_tax' %} active {% endif %}">
-            ថ្លៃឈ្នួលអចលនទ្រព្យ
-        </a>
+            <a href="{% url 'about_unused_land_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_unused_land_tax' %}active{% endif %}">
+                ដីមិនប្រើ
+            </a>
 
-        <a href="{% url 'about_advertising_board_tax' %}"
-            style="color: white; text-decoration: none; padding: 12px 10px; font-size: 13px; transition: background 0.2s;"
-            class="{% if request.resolver_match.url_name == 'about_advertising_board_tax' %} active {% endif %}">
-            ផ្សព្វផ្សាយ
-        </a>
+            <a href="{% url 'about_withholding_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_withholding_tax' %}active{% endif %}">
+                Withholding
+            </a>
+
+            <a href="{% url 'about_advertising_board_tax' %}"
+                class="{% if request.resolver_match.url_name == 'about_advertising_board_tax' %}active{% endif %}">
+                ផ្សព្វផ្សាយ
+            </a>
+
+        </div>
     </nav>
 
     <main>
