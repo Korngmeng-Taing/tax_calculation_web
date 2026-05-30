@@ -24,7 +24,6 @@ body {
   font-family: "Battambang", serif;
   color: var(--ink);
   background:
-    url("/static/images/tax_image.png") center/cover no-repeat fixed,
     radial-gradient(
       circle at 20% 80%,
       rgba(120, 119, 198, 0.3),
