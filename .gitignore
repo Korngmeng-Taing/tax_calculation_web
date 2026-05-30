@@ -13,7 +13,5 @@ env/
 # Django Specific
 db.sqlite3
 /media/
-/staticfiles/
-staticfiles/
 # OS Files
 .DS_Store
