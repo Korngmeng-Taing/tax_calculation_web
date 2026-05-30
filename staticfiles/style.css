@@ -3089,3 +3089,316 @@ footer {
 .service-card {
   transition: all 0.3s ease;
 }
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* HERO SECTION */
+.info-hero {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.info-hero h1 {
+  font-size: 2.2rem;
+  line-height: 1.4;
+}
+
+.info-hero p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* PANELS */
+.info-panel {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* BUTTONS */
+.button-section {
+  padding: 40px 20px;
+}
+
+.button-section div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.button-section a {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 12px;
+  text-decoration: none;
+  background: #1e3c72;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.button-section a:hover {
+  transform: translateY(-2px);
+}
+
+/* TABLE RESPONSIVE */
+.tax-table-container {
+  overflow-x: auto;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .info-hero {
+    padding: 60px 15px;
+  }
+
+  .info-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .info-hero p {
+    font-size: 0.95rem;
+  }
+
+  .info-panel {
+    padding: 20px;
+  }
+
+  .info-panel h2 {
+    font-size: 1.2rem;
+  }
+
+  .button-section div {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .button-section a {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  ul {
+    padding-left: 18px;
+  }
+
+  code {
+    font-size: 0.85rem;
+    word-break: break-word;
+  }
+}
+
+/* SMALL MOBILE */
+@media (max-width: 480px) {
+  .info-hero h1 {
+    font-size: 1.25rem;
+  }
+
+  .info-panel {
+    padding: 15px;
+    border-radius: 14px;
+  }
+
+  .info-panel h2 {
+    font-size: 1rem;
+  }
+
+  p,
+  li {
+    font-size: 0.92rem;
+    line-height: 1.7;
+  }
+}
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+nav a {
+  font-size: 13px;
+}
+
+/* Hero Section */
+.hero {
+  grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+/* Panels */
+.panel {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Grid Forms */
+.grid {
+  width: 100%;
+}
+
+.grid input,
+.grid select,
+.grid textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Cards */
+.cards-grid,
+.tax-types-grid,
+.why-grid,
+.faq-grid,
+.team-grid,
+.overview-grid {
+  grid-template-columns: 1fr !important;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+.btn,
+.learn-more-btn,
+.card-link {
+  width: 100%;
+  text-align: center;
+}
+
+/* Footer */
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand h1 {
+    font-size: 18px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .card,
+  .tax-type-card,
+  .faq-item,
+  .overview-card,
+  .team-card {
+    padding: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .tax-table-container {
+    overflow-x: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 15px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}

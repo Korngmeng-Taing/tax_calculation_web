@@ -3230,3 +3230,175 @@ img {
     line-height: 1.7;
   }
 }
+/* =========================
+   MOBILE RESPONSIVE FIX
+========================= */
+
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 15px;
+  flex-wrap: wrap;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 100%;
+}
+
+nav a {
+  font-size: 13px;
+}
+
+/* Hero Section */
+.hero {
+  grid-template-columns: 1fr;
+  padding: 20px;
+}
+
+.hero-text {
+  text-align: center;
+}
+
+/* Panels */
+.panel {
+  width: 100%;
+  padding: 20px;
+}
+
+/* Grid Forms */
+.grid {
+  width: 100%;
+}
+
+.grid input,
+.grid select,
+.grid textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Cards */
+.cards-grid,
+.tax-types-grid,
+.why-grid,
+.faq-grid,
+.team-grid,
+.overview-grid {
+  grid-template-columns: 1fr !important;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Buttons */
+.btn,
+.learn-more-btn,
+.card-link {
+  width: 100%;
+  text-align: center;
+}
+
+/* Footer */
+.footer-content {
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .brand {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .brand h1 {
+    font-size: 18px;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .card,
+  .tax-type-card,
+  .faq-item,
+  .overview-card,
+  .team-card {
+    padding: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .tax-table-container {
+    overflow-x: auto;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  header {
+    padding: 10px;
+  }
+
+  .hero {
+    padding: 15px;
+  }
+
+  .panel {
+    padding: 15px;
+  }
+
+  .hero-text h1,
+  .hero-text h2 {
+    font-size: 22px;
+  }
+
+  .section-header h2 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 12px;
+  }
+}
