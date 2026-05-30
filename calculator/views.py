@@ -174,16 +174,16 @@ def salary_tax(request):
             grants_benefits_amount = convert_from_khr(grants_benefits_khr, currency)
             
             # Save to database in KHR
-            tax_record = TaxRecord.objects.create(
-                tax_type='salary',
-                currency=currency,
-                income=income,
-                status=status,
-                wife_status=wife_status,
-                dependents=dependents,
-                tax_amount=tax_amount,
-                net_income=net_income
-            )
+          #  tax_record = TaxRecord.objects.create(
+               # tax_type='salary',
+               # currency=currency,
+               # income=income,
+               # status=status,
+                #wife_status=wife_status,
+              #  dependents=dependents,
+               # tax_amount=tax_amount,
+               # net_income=net_income
+           # )
             
             # Create detailed calculation breakdown
             TaxCalculationDetail.objects.create(
