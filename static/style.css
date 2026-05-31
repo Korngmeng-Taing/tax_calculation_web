@@ -40,6 +40,7 @@ body {
   min-height: 100vh;
   background-attachment: fixed;
   animation: backgroundShift 20s ease-in-out infinite alternate;
+  margin-top: 165px;
 }
 
 header {
@@ -48,8 +49,15 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 24px;
-  animation: slideInDown 1s ease-out;
-  background-color: blue;
+  background-color: #0c3c86;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+  transition: none;
 }
 
 .brand {
@@ -2718,6 +2726,52 @@ footer {
   display: inline-block;
 }
 
+/* Main Navigation Bar Styling */
+.main-navbar {
+  background-color: #0c3c86;
+  padding: 16px 8vw;
+  display: flex;
+  overflow-x: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 95px;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+  transition: none;
+}
+
+.nav-scroll {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+}
+
+.main-navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.main-navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  transform: translateY(-2px);
+  transition: none;
+}
+
+.main-navbar a.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: #fff;
+  border-bottom: 2px solid white;
+  transition: none;
+}
+
 /* Objectives Section */
 .objectives-section {
   margin-bottom: 80px;
@@ -3095,14 +3149,14 @@ footer {
 .tax-types-grid,
 .tax-cards,
 .overview-grid {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  overflow-x: auto;
+  overflow-x: hidden;
   overflow-y: hidden;
-  scroll-behavior: smooth;
   padding-bottom: 10px;
 
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 
 /* Chrome */
@@ -3110,15 +3164,14 @@ footer {
 .tax-types-grid::-webkit-scrollbar,
 .tax-cards::-webkit-scrollbar,
 .overview-grid::-webkit-scrollbar {
-  height: 8px;
+  display: none;
 }
 
 .cards-grid::-webkit-scrollbar-thumb,
 .tax-types-grid::-webkit-scrollbar-thumb,
 .tax-cards::-webkit-scrollbar-thumb,
 .overview-grid::-webkit-scrollbar-thumb {
-  background: #004b87;
-  border-radius: 20px;
+  display: none;
 }
 
 /* Cards */
