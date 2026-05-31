@@ -1,6 +1,3 @@
-body {
-  /* removed debug border for production */
-}
 :root {
   --ink: #1a1a1a;
   --paper: #99ece0;
@@ -3090,352 +3087,69 @@ footer {
   transition: all 0.3s ease;
 }
 /* ========================= */
-/* RESPONSIVE FIX */
+/* HORIZONTAL CARD SCROLL */
 /* ========================= */
 
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-  margin: 0;
-  padding: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-/* Container */
-.container,
-.main-content,
-.hero,
-.hero-content,
-.cards-section,
-.tax-types-section,
-.overview-section,
-.faq-section,
-.why-section {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-}
-
-/* ALL GRID FIXES */
 .cards-grid,
 .tax-types-grid,
-.faq-grid,
-.why-grid,
-.team-grid,
-.tax-brackets,
 .tax-cards,
 .overview-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
   gap: 20px;
-  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding-bottom: 10px;
+
+  scrollbar-width: thin;
 }
 
-/* CARD FIXES */
+/* Chrome */
+.cards-grid::-webkit-scrollbar,
+.tax-types-grid::-webkit-scrollbar,
+.tax-cards::-webkit-scrollbar,
+.overview-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.cards-grid::-webkit-scrollbar-thumb,
+.tax-types-grid::-webkit-scrollbar-thumb,
+.tax-cards::-webkit-scrollbar-thumb,
+.overview-grid::-webkit-scrollbar-thumb {
+  background: #004b87;
+  border-radius: 20px;
+}
+
+/* Cards */
 .card,
-.tax-type-card,
-.faq-item,
-.why-card,
-.team-card,
-.bracket-card,
 .tax-card,
-.overview-card,
-.enhanced-card,
-.service-card {
-  width: 100%;
-  min-width: 0;
-  max-width: 100%;
-  overflow: hidden;
+.tax-type-card,
+.overview-card {
+  flex: 0 0 300px;
+  min-width: 300px;
+  max-width: 300px;
 }
 
-/* IMAGES */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* TABLE FIX */
-.tax-table-container {
-  overflow-x: auto;
-  width: 100%;
-}
-
-/* HEADER */
-header {
-  width: 100%;
-  flex-wrap: wrap;
-}
-
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-/* BUTTONS */
-.btn,
-.card-link,
-.learn-more-btn {
-  max-width: 100%;
-  word-break: break-word;
-}
-
-/* FORM */
-input,
-select,
-textarea {
-  width: 100%;
-  max-width: 100%;
-}
-
-/* HERO SECTION */
-.hero-content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-/* ========================= */
-/* TABLET */
-/* ========================= */
+/* Tablet */
 @media (max-width: 1024px) {
-  .hero-content {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-
-  .cards-grid,
-  .tax-types-grid,
-  .faq-grid,
-  .why-grid,
-  .team-grid,
-  .overview-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .hero-visual {
-    display: none;
-  }
-}
-
-/* ========================= */
-/* PHONE */
-/* ========================= */
-@media (max-width: 768px) {
-  body {
-    overflow-x: hidden;
-  }
-
-  header {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 15px;
-  }
-
-  nav {
-    width: 100%;
-    justify-content: flex-start;
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 10px;
-  }
-
-  .brand {
-    width: 100%;
-  }
-
-  .hero,
-  .hero-content,
-  .overview-section,
-  .tax-types-section,
-  .cards-section,
-  .faq-section,
-  .why-section,
-  .info-section,
-  .rates-section,
-  .stats-section {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .cards-grid,
-  .tax-types-grid,
-  .faq-grid,
-  .why-grid,
-  .team-grid,
-  .tax-brackets,
-  .tax-cards,
-  .overview-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
   .card,
+  .tax-card,
   .tax-type-card,
-  .faq-item,
-  .why-card,
-  .team-card,
-  .overview-card,
-  .enhanced-card {
-    padding: 20px;
-  }
-
-  .hero-text h1,
-  .hero-text h2 {
-    font-size: 28px;
-    line-height: 1.3;
-  }
-
-  .section-header h2 {
-    font-size: 24px;
-  }
-
-  .card-link,
-  .btn,
-  .learn-more-btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .tax-table {
-    min-width: 600px;
-  }
-
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-links {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-
-/* ========================= */
-/* SMALL PHONE */
-/* ========================= */
-@media (max-width: 480px) {
-  .hero-text h1,
-  .hero-text h2 {
-    font-size: 22px;
-  }
-
-  .section-header h2 {
-    font-size: 20px;
-  }
-
-  .card,
-  .tax-type-card,
-  .faq-item,
-  .why-card,
-  .team-card,
   .overview-card {
-    padding: 15px;
-  }
-
-  nav a {
-    font-size: 13px;
-  }
-
-  .logo {
-    width: 45px;
-    height: 45px;
+    flex: 0 0 260px;
+    min-width: 260px;
+    max-width: 260px;
   }
 }
-/* ========================= */
-/* RESPONSIVE NAVBAR */
-/* ========================= */
 
-.main-navbar {
-  background-color: #003a6a;
-  width: 100%;
-  overflow: hidden;
-}
-
-.nav-scroll {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding: 0 12px;
-  overflow-x: auto;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  white-space: nowrap;
-}
-
-.nav-scroll::-webkit-scrollbar {
-  display: none;
-}
-
-.main-navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 14px 12px;
-  font-size: 13px;
-  flex-shrink: 0;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.main-navbar a:hover,
-.main-navbar a.active {
-  background-color: rgba(255, 255, 255, 0.15);
-}
-
-/* MOBILE */
+/* Phone */
 @media (max-width: 768px) {
-  .nav-scroll {
-    padding: 8px;
-  }
-
-  .main-navbar a {
-    font-size: 12px;
-    padding: 10px 12px;
-  }
-}
-
-/* ========================= */
-/* MAIN HEADER RESPONSIVENESS */
-/* ========================= */
-.main-header {
-  background-color: #004b87;
-  padding: 15px 8vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  gap: 15px;
-}
-
-@media (max-width: 768px) {
-  .main-header {
-    flex-direction: column;
-    padding: 15px;
-    align-items: center;
-    gap: 15px;
-    text-align: center;
-  }
-  
-  .main-header .brand {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  .main-header .brand-text {
-    text-align: center;
-  }
-
-  .main-header .header-actions {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  .card,
+  .tax-card,
+  .tax-type-card,
+  .overview-card {
+    flex: 0 0 220px;
+    min-width: 220px;
+    max-width: 220px;
   }
 }
