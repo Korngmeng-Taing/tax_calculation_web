@@ -49,6 +49,7 @@ header {
   justify-content: space-between;
   gap: 24px;
   animation: slideInDown 1s ease-out;
+  background-color: blue;
 }
 
 .brand {
