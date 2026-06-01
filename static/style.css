@@ -3354,9 +3354,11 @@ textarea {
 /* ========================= */
 
 .main-navbar {
-  background-color: #003a6a;
+  background: linear-gradient(135deg, #003a6a, #004b87);
   width: 100%;
   overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-scroll {
@@ -3382,22 +3384,67 @@ textarea {
   flex-shrink: 0;
   border-radius: 6px;
   transition: 0.3s;
+  position: relative;
+}
+
+.main-navbar a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 60%;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 2px;
+  transition: transform 0.3s ease;
+}
+
+.main-navbar a:hover::after,
+.main-navbar a.active::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
 .main-navbar a:hover,
 .main-navbar a.active {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .main-navbar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-scroll {
+    justify-content: center;
+    gap: 0;
+    padding: 0;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .main-navbar a {
+    font-size: 13.5px;
+    padding: 14px 5px;
+  }
 }
 
 /* MOBILE */
 @media (max-width: 768px) {
   .nav-scroll {
     padding: 8px;
+    gap: 2px;
   }
 
   .main-navbar a {
     font-size: 12px;
-    padding: 10px 12px;
+    padding: 10px 10px;
+  }
+
+  .main-navbar a::after {
+    display: none;
   }
 }
 
