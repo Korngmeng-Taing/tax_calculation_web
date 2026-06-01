@@ -56,11 +56,6 @@
                 ទំព័រដើម
             </a>
 
-            <a href="{% url 'tax_news' %}"
-                class="{% if request.resolver_match.url_name == 'tax_news' or request.resolver_match.url_name == 'tax_news_detail' %}active{% endif %}">
-                ព័ត៌មានពន្ធ
-            </a>
-
             <a href="{% url 'about_tax' %}"
                 class="{% if request.resolver_match.url_name == 'about_tax' %}active{% endif %}">
                 អំពីពន្ធ
@@ -148,8 +143,6 @@
             <div class="footer-links" style="display: flex; justify-content: center; gap: 15px; margin-top: 8px;">
                 <a href="{% url 'about_tax' %}"
                     style="color: #63b3ed; text-decoration: none; font-size: 13px;">ស្វែងយល់អំពីពន្ធ</a>
-                <a href="{% url 'tax_news' %}"
-                    style="color: #63b3ed; text-decoration: none; font-size: 13px;">ព័ត៌មានពន្ធ</a>
             </div>
         </div>
     </footer>

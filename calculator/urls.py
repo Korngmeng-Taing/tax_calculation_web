@@ -33,6 +33,4 @@ urlpatterns = [
 	path("about/plt/", views.about_plt_tax, name="about_plt_tax"),
 	path("transportation-tax/", views.transportation_tax, name="transportation_tax"),
 	path("about/transportation-tax/", views.about_transportation_tax, name="about_transportation_tax"),
-	path("news/", views.tax_news, name="tax_news"),
-	path("news/<slug:slug>/", views.tax_news_detail, name="tax_news_detail"),
 	]
