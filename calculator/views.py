@@ -14,12 +14,8 @@ from tax_calculators import (
     get_currency_symbol,
 )
 from tax_calculators.income_tax import calculate_income_tax_with_breakdown
-from tax_calculators.patent_tax import calculate_total_patent_tax
 from tax_calculators.special_tax import calculate_special_tax_with_breakdown
-from tax_calculators.registration_tax import calculate_registration_tax_with_renewal
-from tax_calculators.unused_land_tax import calculate_unused_land_tax_progressive
 from tax_calculators.advertising_board_tax import calculate_advertising_board_tax
-from tax_calculators.accomodation import calculate_accomodation_tax
 from tax_calculators.transport_tax import calculate_vehicle_tax
 
 def get_tax_bracket(taxable_income):
@@ -481,6 +477,7 @@ def withholding_tax(request):
     net_amount = None
     selected_currency = 'KHR'
     tax_rate = None
+    amount = None
     
     if request.method == 'POST':
         form = WithholdingTaxForm(request.POST)
@@ -844,8 +841,8 @@ def accomodation_tax(request):
             # Convert to KHR for calculation if needed
             room_rate_khr = convert_to_khr(room_rate, currency)
             
-            # Calculate accommodation tax (5% of room rate per night)
-            tax_amount_khr = room_rate_khr * Decimal('0.05') * nights
+            # Calculate accommodation tax (2% of room rate per night)
+            tax_amount_khr = room_rate_khr * Decimal('0.02') * nights
             
             # Total amount including tax
             total_amount_khr = (room_rate_khr * nights) + tax_amount_khr

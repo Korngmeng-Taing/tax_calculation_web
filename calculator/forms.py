@@ -172,10 +172,6 @@ class IncomeTaxForm(forms.Form):
     )
 
 
-# Keep the old form for backward compatibility
-class TaxCalculatorForm(SalaryTaxForm):
-    pass
-
 
 class WithholdingTaxForm(forms.Form):
     currency = forms.ChoiceField(
@@ -582,23 +578,13 @@ class AdvertisingBoardTaxForm(forms.Form):
     BOARD_TYPE_CHOICES = [
 
         (
-            'paper_small',
-            'បណ្ណប្រកាសក្រដាស ≤ 40 ដម²'
+            'paper_poster',
+            'បណ្ណប្រកាសក្រដាស'
         ),
 
         (
-            'paper_large',
-            'បណ្ណប្រកាសក្រដាស > 40 ដម²'
-        ),
-
-        (
-            'rubber_small',
-            'បណ្ណប្រកាសកៅស៊ូ/ក្រណាត់ ≤ 40 ដម²'
-        ),
-
-        (
-            'rubber_large',
-            'បណ្ណប្រកាសកៅស៊ូ/ក្រណាត់ > 40 ដម²'
+            'material_poster',
+            'បណ្ណប្រកាសកៅស៊ូ/ក្រណាត់'
         ),
 
         (
@@ -607,7 +593,7 @@ class AdvertisingBoardTaxForm(forms.Form):
         ),
 
         (
-            'commercial_board',
+            'text_image',
             'ផ្ទាំងអក្សរ ឬ ផ្ទាំងរូបភាព'
         ),
 
