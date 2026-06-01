@@ -37,6 +37,11 @@
                         <span style="font-weight: bold; color: #475569;">ពន្ធលើតម្លៃបន្ថែម (10%)</span>
                         <strong style="color: #1e3c72; font-size: 1.5rem;">{% if tax_amount is not None %}{{ currency_symbol }} {{ tax_amount|floatformat:2 }}{% else %}{{ currency_symbol }} 0.00{% endif %}</strong>
                     </div>
+                    {% if tax_amount is not None and form.amount.value %}
+                    <div style="margin-top: 20px; text-align: center;">
+                        <canvas id="vatChart" width="250" height="250" style="max-width: 300px; margin: 0 auto;"></canvas>
+                    </div>
+                    {% endif %}
                     <div style="text-align: center; margin-top: 20px;">
                         <button type="submit" class="btn btn-primary" style="padding: 12px 35px; font-size: 1rem;">ចាប់ផ្តើមគណនា</button>
                     </div>
@@ -74,4 +79,33 @@
 
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        {% if tax_amount is not None and form.amount.value %}
+            var vatCtx = document.getElementById('vatChart').getContext('2d');
+            new Chart(vatCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['តម្លៃលក់សុទ្ធ', 'អាករលើតម្លៃបន្ថែម (VAT)'],
+                    datasets: [{
+                        data: [{{ form.amount.value }}, {{ tax_amount }}],
+                        backgroundColor: ['#8b5cf6', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { font: { family: "'Kantumruy Pro', sans-serif", size: 12 } }
+                        }
+                    }
+                }
+            });
+        {% endif %}
+    });
+</script>
 {% endblock %}

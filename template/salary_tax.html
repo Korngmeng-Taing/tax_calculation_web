@@ -107,56 +107,91 @@
                 </div>
 
                 <div class="panel">
-                    <div class="tax-breakdown">
-                        <div class="breakdown-item">
-                            <span>ចំណូល:</span>
-                            <strong>{{ currency_symbol }} {% if form.income.value is not None %}{{ form.income.value|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                    <div style="display: flex; flex-wrap: wrap; gap: 30px; align-items: flex-start;">
+                        <div style="flex: 1; min-width: 280px;">
+                            <div class="tax-breakdown">
+                                <div class="breakdown-item">
+                                    <span>ចំណូល:</span>
+                                    <strong>{{ currency_symbol }} {% if form.income.value is not None %}{{ form.income.value|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>អត្ថប្រយោជន៍/អំណោយ:</span>
+                                    <strong>{{ currency_symbol }} {% if grants_benefits_amount is not None %}{{ grants_benefits_amount|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>គ្មានពន្ធលើកូន:</span>
+                                    <strong>{{ currency_symbol }} {% if deduction_children is not None %}{{ deduction_children|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>គ្មានពន្ធលើប្រពន្ធ (បើធ្វើការផ្ទះ):</span>
+                                    <strong>{{ currency_symbol }} {% if deduction_wife is not None %}{{ deduction_wife|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>អត្រាពន្ធលើប្រាក់ខែ:</span>
+                                    <strong>{% if tax_rate_percentage is not None %}{{ tax_rate_percentage|floatformat:1 }}%{% else %}0.0%{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>ពន្ធលើប្រាក់ខែ:</span>
+                                    <strong>{{ currency_symbol }} {% if salary_tax is not None %}{{ salary_tax|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>ពន្ធលើអត្ថប្រយោជន៍ (20%):</span>
+                                    <strong>{{ currency_symbol }} {% if grant_tax is not None %}{{ grant_tax|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item">
+                                    <span>អត្ថប្រយោជន៍សង្គម:</span>
+                                    <strong>{{ currency_symbol }} {% if grants_benefits_amount is not None %}{{ grants_benefits_amount|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                <div class="breakdown-item total">
+                                    <span>ពន្ធសរុប:</span>
+                                    <strong>{{ currency_symbol }} {% if tax_amount is not None %}{{ tax_amount|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                                </div>
+                                {% if net_income is not None %}
+                                <div class="breakdown-item net-income">
+                                    <span>ប្រាក់សុទ្ធ:</span>
+                                    <strong>{{ currency_symbol }} {{ net_income|floatformat:2 }}</strong>
+                                </div>
+                                {% endif %}
+                            </div>
                         </div>
-                        <div class="breakdown-item">
-                            <span>អត្ថប្រយោជន៍/អំណោយ:</span>
-                            <strong>{{ currency_symbol }} {% if grants_benefits_amount is not None %}{{ grants_benefits_amount|floatformat:2 }}{% else %}0.00{% endif %}</strong>
+                        <div style="flex: 1; min-width: 280px; max-width: 400px; margin: 0 auto;">
+                            <canvas id="salaryChart" width="300" height="300"></canvas>
                         </div>
-                        <div class="breakdown-item">
-                            <span>គ្មានពន្ធលើកូន:</span>
-                            <strong>{{ currency_symbol }} {% if deduction_children is not None %}{{ deduction_children|floatformat:2 }}{% else %}0.00{% endif %}</strong>
-                        </div>
-                        <div class="breakdown-item">
-                            <span>គ្មានពន្ធលើប្រពន្ធ (បើធ្វើការផ្ទះ):</span>
-                            <strong>{{ currency_symbol }} {% if deduction_wife is not None %}{{ deduction_wife|floatformat:2 }}{% else %}0.00{% endif %}</strong>
-                        </div>
-                        <div class="breakdown-item">
-                            <span>អត្រាពន្ធលើប្រាក់ខែ:</span>
-                            <strong>{% if tax_rate_percentage is not None %}{{ tax_rate_percentage|floatformat:1 }}%{% else %}0.0%{% endif %}</strong>
-                        </div>
-                        <div class="breakdown-item">
-                            <span>ពន្ធលើប្រាក់ខែ:</span>
-                            <strong>{{ currency_symbol }} {% if salary_tax is not None %}{{ salary_tax|floatformat:2 }}{% else %}0.00{% endif %}</strong>
-                        </div>
-                        <div class="breakdown-item">
-                            <span>ពន្ធលើអត្ថប្រយោជន៍ (20%):</span>
-                            <strong>{{ currency_symbol }} {% if grant_tax is not None %}{{ grant_tax|floatformat:2 }}{% else %}0.00{% endif %}</strong>
-                        </div>
-                        <div class="breakdown-item">
-                            <span>អត្ថប្រយោជន៍សង្គម:</span>
-                            <strong>{{ currency_symbol }} {% if grants_benefits_amount is not None %}{{ grants_benefits_amount|floatformat:2 }}{% else %}0.00{% endif %}</strong>
-                        </div>
-                        <div class="breakdown-item total">
-                            <span>ពន្ធសរុប:</span>
-                            <strong>{{ currency_symbol }} {% if tax_amount is not None %}{{ tax_amount|floatformat:2 }}{% else %}0.00{% endif %}</strong>
-                        </div>
-                        {% if net_income is not None %}
-                        <div class="breakdown-item net-income">
-                            <span>ប្រាក់សុទ្ធ:</span>
-                            <strong>{{ currency_symbol }} {{ net_income|floatformat:2 }}</strong>
-                        </div>
-                        {% endif %}
                     </div>
                 </div>
             </section>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            {% if tax_amount is not None and net_income is not None %}
+                var ctx = document.getElementById('salaryChart').getContext('2d');
+                var totalDeductions = {{ deduction_children|default:0 }} + {{ deduction_wife|default:0 }};
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['ប្រាក់សុទ្ធ', 'ពន្ធសរុប', 'ការកាត់'],
+                        datasets: [{
+                            data: [{{ net_income }}, {{ tax_amount }}, totalDeductions],
+                            backgroundColor: ['#22c55e', '#ef4444', '#f59e0b'],
+                            borderWidth: 0
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom',
+                                labels: { font: { family: "'Kantumruy Pro', sans-serif", size: 12 } }
+                            }
+                        }
+                    }
+                });
+            {% endif %}
+        });
+
         document.getElementById('tax-form').addEventListener('submit', function(e) {
             setTimeout(function() {
                 document.getElementById('calculator-section').style.display = 'none';

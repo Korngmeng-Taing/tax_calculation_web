@@ -41,6 +41,11 @@
                         <span style="font-weight: bold; color: #475569;">ពន្ធប៉ាន់ស្មាន</span>
                         <strong style="color: #1e3c72; font-size: 1.5rem;">{{ currency_symbol }} {{ tax_amount|default:"0"|floatformat:2 }}</strong>
                     </div>
+                    {% if tax_amount is not None %}
+                    <div style="margin-top: 20px; text-align: center;">
+                        <canvas id="propertyChart" width="250" height="250" style="max-width: 300px; margin: 0 auto;"></canvas>
+                    </div>
+                    {% endif %}
                     <div style="text-align: center; margin-top: 20px;">
                         <button type="submit" class="btn btn-primary" style="padding: 12px 35px; font-size: 1rem;">ចាប់ផ្តើមគណនា</button>
                     </div>
@@ -78,4 +83,33 @@
 
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.7/dist/chart.umd.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        {% if tax_amount is not None and form.property_value.value %}
+            var propCtx = document.getElementById('propertyChart').getContext('2d');
+            new Chart(propCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['តម្លៃអចលនទ្រព្យ', 'ពន្ធអាករ'],
+                    datasets: [{
+                        data: [{{ form.property_value.value }}, {{ tax_amount }}],
+                        backgroundColor: ['#3b82f6', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { font: { family: "'Kantumruy Pro', sans-serif", size: 12 } }
+                        }
+                    }
+                }
+            });
+        {% endif %}
+    });
+</script>
 {% endblock %}
