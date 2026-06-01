@@ -50,10 +50,11 @@ class TaxRecord(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
+        pv = self.property_value or 0
         if self.tax_type == 'salary':
             return f"ពន្ធប្រាក់បៀវត្ស: {self.income:,}៛ → ពន្ធ: {self.tax_amount:,}៛ (ថ្ងៃ {self.created_at.date()})"
         else:
-            return f"ពន្ធអាករ: {self.property_value:,}៛ → ពន្ធ: {self.tax_amount:,}៛ (ថ្ងៃ {self.created_at.date()})"
+            return f"{self.get_tax_type_display()}: {pv:,}៛ → ពន្ធ: {self.tax_amount:,}៛ (ថ្ងៃ {self.created_at.date()})"
 
 
 class TaxCalculationDetail(models.Model):

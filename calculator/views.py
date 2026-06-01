@@ -136,7 +136,7 @@ def salary_tax(request):
         form = SalaryTaxForm(request.POST)
         if form.is_valid():
             currency = form.cleaned_data['currency']
-            income = form.cleaned_data['income']  # Annual income
+            income = form.cleaned_data['income']  # Monthly income
             status = form.cleaned_data['status']
             wife_status = form.cleaned_data.get('wife_status', 'housework')  # Default to housework
             dependents = form.cleaned_data['dependents']
@@ -158,6 +158,10 @@ def salary_tax(request):
 
             # Net income calculation (annual)
             net_income_khr = income_khr - tax_amount_khr
+
+            # Save KHR values before converting for display
+            deduction_children_khr = deduction_children
+            deduction_wife_khr = deduction_wife
 
             # Convert back to selected currency for display
             tax_amount = convert_from_khr(tax_amount_khr, currency)
@@ -186,9 +190,9 @@ def salary_tax(request):
                 tax_record=tax_record,
                 tax_rate=tax_rate,
                 taxable_amount=taxable_income_khr,
-                deduction_children=deduction_children,  # Already in KHR
-                deduction_wife=deduction_wife,  # Already in KHR
-                total_deductions=deduction_children + deduction_wife,
+                deduction_children=deduction_children_khr,
+                deduction_wife=deduction_wife_khr,
+                total_deductions=deduction_children_khr + deduction_wife_khr,
                 salary_tax_amount=salary_tax_khr,
                 grant_benefit_amount=grants_benefits_khr,
                 grant_tax_amount=grant_tax_khr,
@@ -791,7 +795,7 @@ def unused_land_tax(request):
             TaxCalculationDetail.objects.create(
                 tax_record=tax_record,
                 tax_rate=Decimal('0.02'),
-                taxable_amount=convert_to_khr(Decimal(str(breakdown_dict['tax_base'])), currency),
+                taxable_amount=Decimal(str(breakdown_dict['tax_base'])),
                 tax_components=breakdown_dict
             )
             

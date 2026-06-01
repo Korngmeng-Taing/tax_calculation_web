@@ -13,11 +13,11 @@ class SalaryTaxForm(forms.Form):
     )
     
     income = forms.DecimalField(
-        label="ចំណូលប្រចាំឆ្នាំ",
+        label="ចំណូលប្រចាំខែ",
         min_value=0,
         decimal_places=2,
         widget=forms.NumberInput(attrs={
-            'placeholder': 'ឧ. 12,000,000',
+            'placeholder': 'ឧ. 10,000,000',
             'class': 'form-input',
             'step': '0.01'
         })

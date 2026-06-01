@@ -271,13 +271,17 @@ def calculate_advertising_board_tax(
     # PERIOD MULTIPLIER
     # =====================================================
 
-    if declaration_period == "first_half":
+    if declaration_period == "yearly":
 
         period_multiplier = Decimal("1")
 
+    elif declaration_period == "monthly":
+
+        period_multiplier = Decimal("1") / Decimal("12")
+
     else:
 
-        period_multiplier = Decimal("0.5")
+        period_multiplier = Decimal("1")
 
     # =====================================================
     # TOTAL TAX

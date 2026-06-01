@@ -42,10 +42,10 @@ def calculate_salary_tax(income, status, dependents):
 def calculate_salary_tax_with_breakdown(income, status, dependents, grants_benefits=0, wife_status='housework'):
     """
     Cambodian salary tax calculation with detailed breakdown including grants/benefits.
-    Income should be annual.
+    Income should be monthly.
     Returns: (tax_amount, tax_rate, deduction_children, deduction_wife, taxable_income)
 
-    Tax brackets (annual income in KHR):
+    Tax brackets (monthly income in KHR):
     - 0 to 1,500,000: 0%
     - 1,500,001 to 2,000,000: 5% (income × 5% - 75,000)
     - 2,000,001 to 8,500,000: 10% (income × 10% - 175,000)
@@ -53,18 +53,18 @@ def calculate_salary_tax_with_breakdown(income, status, dependents, grants_benef
     - Over 12,500,000: 20% (income × 20% - 1,225,000)
     """
 
-    # Calculate deductions (annual) - exclude grants_benefits from deductions
-    deduction_children = Decimal(dependents) * Decimal('150000')  # 150,000 per child annually
+    # Calculate deductions (monthly) - exclude grants_benefits from deductions
+    deduction_children = Decimal(dependents) * Decimal('150000')  # 150,000 per child monthly
     deduction_wife = Decimal('0')
     if status in ['married', 'family'] and wife_status == 'housework':
-        deduction_wife = Decimal('150000')  # 150,000 annually for housewife
+        deduction_wife = Decimal('150000')  # 150,000 monthly for housewife
 
     total_deductions = deduction_children + deduction_wife
 
     # Calculate taxable income after deductions (excluding grants/benefits)
     taxable_income = max(Decimal('0'), income - total_deductions)
 
-    # Apply tax brackets for salary income (annual)
+    # Apply tax brackets for salary income (monthly)
     salary_tax = Decimal('0')
     tax_rate = Decimal('0')
 

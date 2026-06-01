@@ -103,7 +103,7 @@ def calculate_combined_income_tax(salary_income=0, investment_income=0, business
     salary_tax = Decimal('0')
     if salary_income > 0:
         # Import here to avoid circular imports
-        from salary_tax import calculate_salary_tax_with_breakdown
+        from tax_calculators.salary_tax import calculate_salary_tax_with_breakdown
         salary_tax, _, _, _, _ = calculate_salary_tax_with_breakdown(
             salary_income, status, dependents, 0, wife_status
         )

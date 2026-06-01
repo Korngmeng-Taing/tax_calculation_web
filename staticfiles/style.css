@@ -201,13 +201,13 @@ nav a.active {
 
 .btn-primary {
   background: var(--gradient-primary);
-  color: #999494;
+  color: #ffffff;
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
 .btn-secondary {
   background: #a5b2ca;
-  color: var(--accent-2);
+  color: #ffffff;
   border: 2px solid var(--accent-2);
 }
 
