@@ -117,6 +117,18 @@
 <section class="tax-types-section" style="background: white; padding: 80px 20px;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
 
+        <!-- Search Bar -->
+        <div style="max-width: 500px; margin: 0 auto 40px; position: relative;">
+            <div style="display: flex; align-items: center; background: #f1f5f9; border-radius: 50px; padding: 0 20px; border: 2px solid #e2e8f0; transition: all 0.3s ease;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="aboutTaxSearchInput" onkeyup="filterAboutTaxCards()" placeholder="ស្វែងរកប្រភេទពន្ធ..."
+                    style="flex: 1; border: none; outline: none; padding: 16px; font-size: 1rem; background: transparent; font-family: 'Kantumruy Pro', sans-serif; color: #1e293b;">
+            </div>
+        </div>
+
         <div class="section-header" style="text-align: center; margin-bottom: 50px;">
             <h2
                 style="font-family: 'Khmer Moul', cursive; color: #1e3c72; font-size: 1.6rem; margin-bottom: 12px; letter-spacing: 0.5px;">
@@ -442,4 +454,26 @@
     </div>
 </section>
 
+<script>
+    function filterAboutTaxCards() {
+        let input = document.getElementById("aboutTaxSearchInput");
+        let filter = input.value.toLowerCase();
+        let cards = document.querySelectorAll(".tax-type-card");
+
+        cards.forEach(function (card) {
+            let text = card.innerText.toLowerCase();
+            if (text.includes(filter)) {
+                card.style.display = "flex";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+</script>
+
+<style>
+    #aboutTaxSearchInput::placeholder {
+        color: #94a3b8;
+    }
+</style>
 {% endblock %}
