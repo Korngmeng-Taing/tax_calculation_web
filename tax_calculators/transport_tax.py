@@ -43,13 +43,3 @@ def calculate_vehicle_tax(vehicle_type, cylinder_capacity, manufacture_year):
         tax_amount = Decimal('250000') 
         
     return tax_amount
-
-# ឧទាហរណ៍នៃការដកស្រង់យកទៅប្រើប្រាស់៖
-# ឡាន Prius ផលិតឆ្នាំ 2010 (កម្លាំង 1800cc) គិតក្នុងឆ្នាំ ២០២៦ គឺអាយុកាល ១៦ឆ្នាំ (ឡានចាស់)
-prusa_tax = calculate_vehicle_tax(
-    vehicle_type='car_sedan_suv', 
-    cylinder_capacity=1800, 
-    manufacture_year=2010
-)
-print(f"ប្រាក់ពន្ធផ្លូវត្រូវបង់៖ {prusa_tax:,} រៀល")
-# ទិន្នផល៖ ប្រាក់ពន្ធផ្លូវត្រូវបង់៖ 150,000 រៀល

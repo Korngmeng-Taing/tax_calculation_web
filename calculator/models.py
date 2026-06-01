@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 
 class TaxRecord(models.Model):
@@ -125,3 +126,36 @@ class TaxCalculationDetail(models.Model):
             })
 
         return breakdown
+
+
+class TaxNews(models.Model):
+    CATEGORY_CHOICES = [
+        ('law', 'ច្បាប់ និងបទប្បញ្ញត្តិ'),
+        ('deadline', 'កាលបរិច្ឆេទកំណត់'),
+        ('tip', 'គន្លឹះពន្ធ'),
+        ('update', 'ការផ្លាស់ប្តូរថ្មី'),
+        ('general', 'ព័ត៌មានទូទៅ'),
+    ]
+
+    title = models.CharField(max_length=200, verbose_name="ចំណងជើង")
+    slug = models.SlugField(max_length=200, unique=True, verbose_name="ឈ្មោះ URL")
+    summary = models.TextField(verbose_name="សង្ខេប", blank=True)
+    content = models.TextField(verbose_name="ខ្លឹមសារ")
+    category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, default='general', verbose_name="ប្រភេទ")
+    source = models.CharField(max_length=100, verbose_name="ប្រភព", blank=True)
+    is_pinned = models.BooleanField(default=False, verbose_name="ពិសេស")
+    published_date = models.DateField(verbose_name="កាលបរិច្ឆេទចេញផ្សាយ")
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        verbose_name = "ព័ត៌មានពន្ធ"
+        verbose_name_plural = "ព័ត៌មានពន្ធ"
+        ordering = ['-is_pinned', '-published_date']
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+        return self.title

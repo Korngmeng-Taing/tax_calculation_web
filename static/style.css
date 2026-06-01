@@ -3486,3 +3486,43 @@ textarea {
     justify-content: center;
   }
 }
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 22px !important;
+  }
+  .panel {
+    padding: 16px !important;
+    border-radius: 16px !important;
+  }
+  .hero {
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+  .result {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+  .tax-types-section .container,
+  .overview-section .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tax-types-grid,
+  .cards-grid {
+    grid-template-columns: 1fr !important;
+  }
+  input, select {
+    font-size: 16px !important;
+  }
+}

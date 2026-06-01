@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import TaxRecord, TaxCalculationDetail
+from .models import TaxRecord, TaxCalculationDetail, TaxNews
 
 
 class TaxCalculationDetailInline(admin.StackedInline):
@@ -63,5 +63,26 @@ class TaxCalculationDetailAdmin(admin.ModelAdmin):
         ('ព័ត៌មានលម្អិត', {
             'fields': ('tax_components', 'created_at'),
             'classes': ('collapse',)
+        }),
+    )
+
+
+@admin.register(TaxNews)
+class TaxNewsAdmin(admin.ModelAdmin):
+    list_display = ('title', 'category', 'is_pinned', 'published_date')
+    list_filter = ('category', 'is_pinned', 'published_date')
+    search_fields = ('title', 'summary', 'content')
+    prepopulated_fields = {'slug': ('title',)}
+    readonly_fields = ('created_at',)
+    
+    fieldsets = (
+        ('ព័ត៌មាន', {
+            'fields': ('title', 'slug', 'category', 'source')
+        }),
+        ('ខ្លឹមសារ', {
+            'fields': ('summary', 'content')
+        }),
+        ('ការកំណត់', {
+            'fields': ('is_pinned', 'published_date', 'created_at')
         }),
     )

@@ -3,7 +3,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .forms import (SalaryTaxForm, PropertyTaxForm, VATTaxForm, IncomeTaxForm, WithholdingTaxForm, PatentTaxForm,
                     SpecialTaxForm, RegistrationTaxForm, UnusedLandTaxForm, AccomodationTaxForm,
                     PLTTaxForm, TransportationTaxForm, AdvertisingBoardTaxForm)
-from .models import TaxRecord, TaxCalculationDetail
+from .models import TaxRecord, TaxCalculationDetail, TaxNews
 from decimal import Decimal
 from tax_calculators import (
     calculate_salary_tax_with_breakdown,
@@ -1091,4 +1091,22 @@ def advertising_board_tax(request):
         'breakdown': breakdown,
         'total_tax': total_tax,
         'currency_symbol': currency_symbol,
+    })
+
+
+def tax_news(request):
+    news_list = TaxNews.objects.all()
+    categories = TaxNews.CATEGORY_CHOICES
+    return render(request, "tax_news.html", {
+        'news_list': news_list,
+        'categories': categories,
+    })
+
+
+def tax_news_detail(request, slug):
+    article = TaxNews.objects.get(slug=slug)
+    recent = TaxNews.objects.exclude(id=article.id)[:5]
+    return render(request, "tax_news_detail.html", {
+        'article': article,
+        'recent': recent,
     })
