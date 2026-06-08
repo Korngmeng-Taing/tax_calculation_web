@@ -6,6 +6,7 @@ from .salary_tax import calculate_salary_tax_with_breakdown, calculate_salary_ta
 from .property_tax import calculate_property_tax
 from .vat_tax import calculate_actual_vat
 from .special_tax import calculate_special_tax
+from .plt_tax import calculate_plt_tax
 from .currency_utils import convert_to_khr, convert_from_khr, get_currency_symbol
 
 __all__ = [
@@ -14,6 +15,7 @@ __all__ = [
     'calculate_property_tax',
     'calculate_actual_vat',
     'calculate_special_tax',
+    'calculate_plt_tax',
     'convert_to_khr',
     'convert_from_khr',
     'get_currency_symbol',
